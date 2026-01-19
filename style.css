@@ -32,8 +32,8 @@ header{
     transform: translateX(-50%);
     display: flex;
     align-items: center;
+    gap: 3rem;
     justify-content: center;
-    gap: 5rem;
     background-color: rgba(159, 101, 144, 0.8);
     backdrop-filter: blur(8px);
     color: white;
@@ -323,7 +323,7 @@ section{
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-     gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 .project-card:hover{
@@ -565,8 +565,8 @@ footer ul li a{
         display: block;
     }
     header{
-        padding:1rem,5rem ;
-        gap: 8rem;
+        padding: 1rem 1.5rem; 
+        justify-content: space-between;
     }
 
     header .logo{
