@@ -3,270 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zetelep</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Zetelep — Mobile Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="img-modal" class="img-modal">
-        <img id="img-modal-content">
-    </div>
-    <header class="header">
-        <a href="#" class="logo"><span>Zetelep</span></a>
 
-        <ul class="nav-links">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-        
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <button class="visit-btn"><a href="https://github.com/Zetelep" target="_blank" rel="noopener">Visit Github</a></button>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">zetelep<span>.</span></a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://github.com/Zetelep" target="_blank" rel="noopener" class="visit-btn">GitHub ↗</a>
+
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="id">ID</button>
+                    <button class="lang-btn" data-lang="ja">JP</button>
+                </div>
+
+                <button id="menu-icon" aria-label="Toggle menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <section id="about" class="about">
-        <div class="about-container">
-            <img src="img/capitano.jpg" alt="">
+    <main>
 
-            <div class="info-box">
-                <div class="text">
-                    <h3>Hello, I'm</h3>
-                    <h1>Zulfa Auliya Akbar</h1>
-                    <span>Mobile Developer</span>
-                </div>
+        <!-- ============ ABOUT / HERO ============ -->
+        <section id="about" class="about">
+            <div class="about-container reveal">
+                <div class="info-box">
+                    <p class="eyebrow" data-i18n="hero.eyebrow">Hello, I'm</p>
+                    <h1>Zulfa Auliya<br>Akbar</h1>
+                    <p class="role"><span data-i18n="hero.role">Mobile Developer</span><span class="cursor">_</span></p>
+                    <p class="bio" data-i18n="hero.bio">
+                        I build clean, thoughtful Android experiences with Kotlin & Jetpack Compose.
+                        Currently crafting apps that people actually enjoy using.
+                    </p>
 
-                <div class="btn-group">
-                    <div class="btn"><a href="" target="_blank">View CV</a></div>
-                    <div class="btn"><a href="#contact">Contact</a></div>
-                </div>
+                    <div class="btn-group">
+                        <a href="" target="_blank" class="btn btn-solid" data-i18n="hero.cv">View CV</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero.touch">Get in touch</a>
+                    </div>
 
-                <div class="socials">
-                    <a href="https://github.com/Zetelep" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/zulfa-auliya" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://x.com/sekidosora" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://instagram.com/zetelep" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-
-                <div class="stack">
-                    <h1>STACK</h1>
-
-                    <div class="stack-logos">
-                        <div class="stack-item">
-                            <img src="img/android.svg" alt="Android">
-                            <span>Android</span>
-                        </div>
-                        <div class="stack-item">
-                            <img src="img/kotlin.png" alt="Android">
-                            <span>Kotlin</span>
-                        </div>
-                        <div class="stack-item">
-                            <img src="img/Flutter.png" alt="Kotlin">
-                            <span>Flutter</span>
-                        </div>
-                        <div class="stack-item">
-                            <img src="img/firebase.png" alt="Firebase">
-                            <span>Firebase</span>
-                        </div>
-                        <div class="stack-item">
-                            <img src="img/jetpack.png" alt="MySQL">
-                            <span>Jetpack Compose</span>
-                        </div>
-                        <div class="stack-item">
-                            <img src="img/supabase.png" alt="Git">
-                            <span>Supabase</span>
-                        </div>
+                    <div class="socials">
+                        <a href="https://github.com/Zetelep" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+                        <a href="https://www.linkedin.com/in/zulfa-auliya" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="https://x.com/sekidosora" target="_blank" rel="noopener" aria-label="X">X</a>
+                        <a href="https://instagram.com/zetelep" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects" class="projects">
-        <h2 class="section-title">Recent Projects</h2>
 
-        <div class="project-grid">
-
-            <div class="project-card">
-                <img src="img/eabsensi.png" alt="">
-                <h3>Geofencing Based <br>E-Attendance</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>Jetpack Compose</span>
-                    <span>Google Maps API</span>
-                    <span>Clean Architecure</span>
-                </div>
-                <p>E-Attendance using geofencing and geolocation feature for accurate attendance recording</p>
-                <div class="btn-group">
-                    <div class="btn"><a href="https://github.com/Zetelep/PKL-EAbsensi-android" target="_blank">Github</a></div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="img/TuneHive.png" alt="">
-                <h3>TuneHive</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>XML</span>
-                    <span>Machine Learning Integration</span>
-                </div>
-                <p> Music app for indie artist for easier sharing their music and connect. Used machine learning based on user preferences for song recomendation</p>
-                <div class="btn-group">
-                    <div class="btn"><a href="https://github.com/TuneHive/MD-TuneHive" target="_blank">Github</a></div>
+                <div class="hero-img">
+                    <img src="img/capitano.jpg" alt="Portrait of Zulfa Auliya Akbar">
                 </div>
             </div>
 
-            <div class="project-card">
-                <img src="img/mirunime.png" alt="">
-                <h3>MiruNime</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>Jetpack Compose</span>
-                    <span>Pagination</span>
-                </div>
-                <p>Modern anime-tracking application allowing users to browse and search.</p>
-                <div class="btn-group">
-                    <div class="btn"><a href="https://github.com/Zetelep/MiruNime" target="_blank">Github</a></div>
+            <div class="stack reveal">
+                <p class="stack-title" data-i18n="stack.title">Tech I work with</p>
+                <div class="stack-logos">
+                    <div class="stack-item"><img src="img/android.svg" alt="Android"><span>Android</span></div>
+                    <div class="stack-item"><img src="img/kotlin.png" alt="Kotlin"><span>Kotlin</span></div>
+                    <div class="stack-item"><img src="img/Flutter.png" alt="Flutter"><span>Flutter</span></div>
+                    <div class="stack-item"><img src="img/firebase.png" alt="Firebase"><span>Firebase</span></div>
+                    <div class="stack-item"><img src="img/jetpack.png" alt="Jetpack Compose"><span>Jetpack Compose</span></div>
+                    <div class="stack-item"><img src="img/supabase.png" alt="Supabase"><span>Supabase</span></div>
                 </div>
             </div>
+        </section>
 
-            <div class="project-card">
-                <img src="img/readwish.png" alt="">
-                <h3>ReadWish</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>XML</span>
-                    <span>Clean Architecture</span>
-                    <span>Offline-first</span>
-                </div>
-                <p>Book Reading app allowing users to search, save, and manage Book based on Gutenberg Library API</p>
-                <div class="btn-group">
-                    <div class="btn"><a href="https://github.com/Zetelep/ReadWish" target="_blank">Github</a></div>
-                </div>
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects" class="projects">
+            <div class="section-head reveal">
+                <p class="eyebrow" data-i18n="projects.eyebrow">Selected Work</p>
+                <h2 class="section-title" data-i18n="projects.title">Recent Projects</h2>
             </div>
 
-            <div class="project-card">
-                <img src="img/future.png" alt="">
-                <h3>Langkah Kita</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>Supabase</span>
-                </div>
-                <p>In Progress....</p>
-                <div class="btn-group">
-                    <div class="btn">Github</div>
-                </div>
+            <div class="project-grid">
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="img/eabsensi.png" alt="Geofencing based E-Attendance app screenshot">
+                    </div>
+                    <div class="project-body">
+                        <h3>Geofencing E-Attendance</h3>
+                        <p data-i18n="projects.eabsensi.desc">E-Attendance using geofencing and geolocation for accurate attendance recording.</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>Jetpack Compose</span><span>Google Maps API</span><span>Clean Architecture</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/Zetelep/PKL-EAbsensi-android" target="_blank" rel="noopener" data-i18n="projects.github">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="img/TuneHive.png" alt="TuneHive music app screenshot">
+                    </div>
+                    <div class="project-body">
+                        <h3>TuneHive</h3>
+                        <p data-i18n="projects.tunehive.desc">Music app for indie artists to share their music and connect, with ML-based song recommendations.</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>XML</span><span>Machine Learning</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/TuneHive/MD-TuneHive" target="_blank" rel="noopener" data-i18n="projects.github">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="img/mirunime.png" alt="MiruNime anime tracking app screenshot">
+                    </div>
+                    <div class="project-body">
+                        <h3>MiruNime</h3>
+                        <p data-i18n="projects.mirunime.desc">Modern anime-tracking application allowing users to browse and search efficiently.</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>Jetpack Compose</span><span>Pagination</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/Zetelep/MiruNime" target="_blank" rel="noopener" data-i18n="projects.github">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <img src="img/readwish.png" alt="ReadWish book reading app screenshot">
+                    </div>
+                    <div class="project-body">
+                        <h3>ReadWish</h3>
+                        <p data-i18n="projects.readwish.desc">Book reading app to search, save, and manage books from the Gutenberg Library API.</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>XML</span><span>Clean Architecture</span><span>Offline-first</span>
+                        </div>
+                        <a class="project-link" href="https://github.com/Zetelep/ReadWish" target="_blank" rel="noopener" data-i18n="projects.github">View on GitHub →</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal is-wip">
+                    <div class="project-img">
+                        <img src="img/future.png" alt="Langkah Kita placeholder image">
+                    </div>
+                    <div class="project-body">
+                        <h3>Langkah Kita</h3>
+                        <p data-i18n="projects.wip">In progress…</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>Supabase</span>
+                        </div>
+                        <span class="project-link is-disabled" data-i18n="projects.soon">Coming soon</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal is-wip">
+                    <div class="project-img">
+                        <img src="img/future.png" alt="Larisi placeholder image">
+                    </div>
+                    <div class="project-body">
+                        <h3>Larisi</h3>
+                        <p data-i18n="projects.wip">In progress…</p>
+                        <div class="project-stack">
+                            <span>Kotlin</span><span>Firebase</span>
+                        </div>
+                        <span class="project-link is-disabled" data-i18n="projects.soon">Coming soon</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="experience">
+            <div class="section-head reveal">
+                <p class="eyebrow" data-i18n="exp.eyebrow">Background</p>
+                <h2 class="section-title" data-i18n="exp.title">Experience</h2>
             </div>
 
-            <div class="project-card">
-                <img src="img/future.png" alt="">
-                <h3>Larisi</h3>
-                <div class="project-stack">
-                    <span>Kotlin</span>
-                    <span>Firebase</span>
-                </div>
-                <p>In Progress....</p>
-                <div class="btn-group">
-                    <div class="btn">Github</div>
-                </div>
-            </div>
+            <div class="timeline">
 
-        </div>
-    </section>
-
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experience</h2>
-
-        <div class="experience-info">
-            <div class="grid">
-                <div class="grid-card">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Information Technology Internship</span>
-                    <h3>4 Month</h3>
-                    <p>UI & data support; led development of a geofencing-based e-attendance system; participated in stakeholder and community field activities.</p>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-meta" data-i18n="exp.intern.meta">Jul 2025 – Dec 2025 · Internship</span>
+                        <h3 data-i18n="exp.intern.role">Information Technology Intern</h3>
+                        <p class="timeline-company" data-i18n="exp.intern.company">Banjarmasin Department of Food Security, Agriculture and Fisheries</p>
+                        <p data-i18n="exp.intern.desc">UI & data support; led development of a geofencing-based e-attendance system; participated in stakeholder and community field activities.</p>
+                    </div>
                 </div>
 
-                <div class="grid-card">
-                    <i class="fa-brands fa-android"></i>   
-                    <span>Bangkit Academy Cohort</span>
-                    <h3>6 Month</h3>
-                    <p>Completed Mobile Development learning path focused on Android (Kotlin), modern app architecture, API integration, and team-based capstone projects.</p>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-meta" data-i18n="exp.bangkit.meta">Sep 2024 – Jan 2025 · Cohort</span>
+                        <h3 data-i18n="exp.bangkit.role">Mobile Development Cohort</h3>
+                        <p class="timeline-company" data-i18n="exp.bangkit.company">Bangkit Academy</p>
+                        <p data-i18n="exp.bangkit.desc">Completed the Mobile Development learning path focused on Android (Kotlin), modern app architecture, API integration, and team-based capstone projects.</p>
+                    </div>
                 </div>
+
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="contact">
+            <div class="section-head reveal">
+                <p class="eyebrow" data-i18n="contact.eyebrow">Say hi</p>
+                <h2 class="section-title" data-i18n="contact.title">Contact Me</h2>
             </div>
 
-            <img src="img/capitano2.jpg" alt="">
-        </div>
+            <form
+                class="contact-form reveal"
+                action="https://formspree.io/f/mnjneynj"
+                method="POST"
+            >
+                <input type="email" name="email" placeholder="your@email.com" required aria-label="Email">
+                <textarea name="message" placeholder="Your message…" rows="5" required aria-label="Message" data-i18n-placeholder="contact.message"></textarea>
+                <button type="submit" class="btn btn-solid" data-i18n="contact.send">Send message</button>
+            </form>
+        </section>
 
-    </section>
-    
-    <section id="contact" class="contact">
-        <form 
-            class="input-box"
-            action="https://formspree.io/f/mnjneynj"
-            method="POST"
-        >
-
-            <h2 class="section-title">Contact Me</h2>
-
-            <div class="input">
-                <input 
-                    type="email" 
-                    name="email"
-                    placeholder="example@gmail.com"
-                    required
-                >
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="input">
-                <textarea
-                    name="message"
-                    placeholder="Your message"
-                    rows="4"
-                    required
-                ></textarea>
-            </div>
-            <button type="submit" class="btn">Submit</button> 
-        </form>
-    </section>
+    </main>
 
     <footer>
-        <ul>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-
-        <p class="copyright">© All Right Reserved | Zetelep | 2026</p>
+        <p class="copyright">© 2026 Zetelep ☕</p>
     </footer>
 
+    <div id="img-modal" class="img-modal">
+        <img id="img-modal-content" alt="Project screenshot enlarged">
+    </div>
 
     <script src="script.js"></script>
 </body>
